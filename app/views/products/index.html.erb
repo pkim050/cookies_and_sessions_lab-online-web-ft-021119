@@ -4,7 +4,14 @@
   <%= label_tag :product %>
   <%= text_field_tag :product %><br>
 
-  <%= submit_tag "Add to cart" %>
+  <%= submit_tag "add to cart" %>
 <% end %>
 
 <h4>Cart</h4>
+<ul>
+  <% if cart.size > 0 %>
+    <%= cart.each do |item| %>
+      <li><%= item %></li>
+    <% end %>
+  <% end %>
+</ul>
