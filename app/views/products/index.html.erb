@@ -1,3 +1,10 @@
 <h1>Products</h1>
 
-<%= form_tag
+<%= form_for do |f| %>
+  <%= f.label :product %>
+  <%= f.text_field :product %><br>
+
+  <%= f.submit "Add to cart" %>
+<% end %>
+
+<h4>Cart</h4>
